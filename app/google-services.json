@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "850485417333",
+    "project_id": "ieucanhan",
+    "storage_bucket": "ieucanhan.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850485417333:android:1fae3ecda908a060796f3c",
+        "android_client_info": {
+          "package_name": "com.hynguyen.chitieucanhan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKoGPSgajzEifHTg3tK3Hc7YpmvYs0Lms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
