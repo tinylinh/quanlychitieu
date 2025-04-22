@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.hynguyen.chitieucanhan.R;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -52,6 +53,13 @@ public class profilenew extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_pprofile3);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+                    != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+            }
+        }
 
         txtdiachi = findViewById(R.id.txtdiachi);
         txthoten = findViewById(R.id.txthoten);
@@ -255,7 +263,7 @@ public class profilenew extends AppCompatActivity implements View.OnClickListene
                                 }
                             });
                 } else {
-                    Toast.makeText(profilenew.this, "Không để trống!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(com.hynguyen.chitieucanhan.profilenew.this, "Không để trống!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
