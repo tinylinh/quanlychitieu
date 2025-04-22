@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgg"
+    android:background="@drawable/bgl"
     android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="150dp"
         android:layout_height="154dp"
+
         android:layout_marginLeft="130dp"
         android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +46,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="65dp"
 
-                    android:background="@drawable/button"
+                    android:background="@drawable/labelinput"
                     android:drawableRight="@drawable/ic_baseline_email_24"
                     android:hint="Nhập Email"
                     android:singleLine="true" />
@@ -64,7 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="65dp"
 
-                    android:background="@drawable/button"
+                    android:background="@drawable/labelinput"
                     android:drawableRight="@drawable/ic_baseline_email_24"
                     android:hint="Nhập Mật Khẩu"
                     android:inputType="textPassword"

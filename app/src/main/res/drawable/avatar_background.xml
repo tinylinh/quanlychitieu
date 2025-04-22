@@ -1,0 +1,13 @@
+<!-- res/drawable/avatar_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Màu nền -->
+    <solid android:color="#E0E0E0" /> <!-- Màu xám nhạt -->
+
+    <!-- Góc bo tròn -->
+    <corners android:radius="75dp" /> <!-- Bo tròn góc lớn -->
+
+    <!-- Viền -->
+    <stroke
+        android:width="3dp"
+        android:color="#FFFFFF" /> <!-- Viền đỏ nhạt dày 3dp -->
+</shape>

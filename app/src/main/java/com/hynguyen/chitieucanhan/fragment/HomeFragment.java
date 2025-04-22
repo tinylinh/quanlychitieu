@@ -224,8 +224,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             tongThu += listThu.get(i).getY();
         }
         ArrayList<Integer> colors = new ArrayList<>();
-        colors.add(Color.RED);
-        colors.add(Color.BLUE);
+        colors.add(Color.parseColor("#E74C3C"));
+        colors.add(Color.parseColor("#5DADE2"));
         List<PieEntry> listPie = new ArrayList<>();
         if (tongThu > 0) {
             listPie.add(new PieEntry(tongThu, "Thu"));

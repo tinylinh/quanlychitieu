@@ -1,0 +1,13 @@
+<!-- res/drawable/edit_icon_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Màu nền -->
+    <solid android:color="#FFFFFF" /> <!-- Màu đỏ nhạt -->
+
+    <!-- Bo góc -->
+    <corners android:radius="20dp" /> <!-- Góc tròn 20dp -->
+
+    <!-- Viền -->
+    <stroke
+        android:width="2dp"
+        android:color="#FFFFFF" /> <!-- Viền trắng 2dp -->
+</shape>
