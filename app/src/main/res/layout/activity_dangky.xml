@@ -16,7 +16,7 @@
     <androidx.cardview.widget.CardView
 
         app:cardElevation="5dp"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="25dp"
         android:layout_margin="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -30,26 +30,28 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_margin="15dp"
-                android:background="@android:color/background_light"
+                android:background="@drawable/rounded_edit_text"
 
                 android:layout_height="65dp">
 
                 <EditText
                     android:singleLine="true"
+
                     android:drawableRight="@drawable/ic_baseline_email_24"
-                    android:background="@android:color/background_light"
+                    android:background="@drawable/rounded_edit_text"
 
                     android:hint="Nhập Email"
                     android:id="@+id/editEmail"
                     android:layout_width="match_parent"
-                    android:layout_height="65dp" />
+                    android:layout_height="65dp"
+                    app:cardCornerRadius="25dp"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_margin="15dp"
                 app:passwordToggleEnabled="true"
-                android:background="@android:color/background_light"
+                android:background="@drawable/rounded_edit_text"
 
                 android:layout_height="65dp">
 
@@ -57,7 +59,7 @@
                     android:inputType="textPassword"
                     android:singleLine="true"
                     android:drawableRight="@drawable/ic_baseline_email_24"
-                    android:background="@android:color/background_light"
+                    android:background="@drawable/rounded_edit_text"
 
                     android:hint="Nhập Mật Khẩu"
                     android:id="@+id/editmatkhau"
@@ -69,15 +71,16 @@
                 android:layout_width="match_parent"
                 android:layout_margin="15dp"
                 app:passwordToggleEnabled="true"
-                android:background="@android:color/background_light"
+                android:background="@drawable/rounded_edit_text"
 
                 android:layout_height="65dp">
 
                 <EditText
                     android:inputType="textPassword"
+
                     android:singleLine="true"
                     android:drawableRight="@drawable/ic_baseline_email_24"
-                    android:background="@android:color/background_light"
+                    android:background="@drawable/rounded_edit_text"
 
                     android:hint="Nhập Lại Mật Khẩu"
                     android:id="@+id/editmatkhau_repeat"

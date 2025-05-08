@@ -16,7 +16,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.hynguyen.chitieucanhan.R;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -263,7 +262,7 @@ public class profilenew extends AppCompatActivity implements View.OnClickListene
                                 }
                             });
                 } else {
-                    Toast.makeText(com.hynguyen.chitieucanhan.profilenew.this, "Không để trống!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(profilenew.this, "Không để trống!", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -201,7 +201,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_weight="1"
-                    android:drawableRight="@drawable/ic_baseline_navigate_next_24"
                     android:gravity="end"
                     android:text="Bạn đang hạng bạch kim"
                     android:textSize="16sp" />
