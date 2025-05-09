@@ -17,6 +17,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.hynguyen.chitieucanhan.R;
 import com.hynguyen.chitieucanhan.activity.DanhMucActivity;
+import com.hynguyen.chitieucanhan.activity.ReportActivity;
 import com.hynguyen.chitieucanhan.pprofile3;
 import com.hynguyen.chitieucanhan.activity.ViTienActivity;
 import com.hynguyen.chitieucanhan.database.AppViewModel;
@@ -38,6 +39,7 @@ public class CaiDatFragment extends Fragment implements View.OnClickListener {
     private RelativeLayout rlLoaiTienTe;
     private TextView txtLoaiTienTe;
     private TextView txtDangxuat;
+    private TextView txtReport;
     private TextView txtProfile;
     private Fragment fm;
     @Nullable
@@ -59,6 +61,10 @@ public class CaiDatFragment extends Fragment implements View.OnClickListener {
         //
         txtProfile = view.findViewById(R.id.txtProfile);
         txtProfile.setOnClickListener(this);
+
+        //
+        txtReport = view.findViewById(R.id.txtReport);
+        txtReport.setOnClickListener(this);
         //
         rlLoaiTienTe = view.findViewById(R.id.rlLoaiTienTe);
         rlLoaiTienTe.setOnClickListener(this);
@@ -70,7 +76,9 @@ public class CaiDatFragment extends Fragment implements View.OnClickListener {
             public void onChanged(LoaiTienTe loaiTienTe) {
                 txtLoaiTienTe.setText(loaiTienTe.getName());
             }
-        });
+        }
+
+        );
 
         return view;
     }
@@ -92,6 +100,10 @@ public class CaiDatFragment extends Fragment implements View.OnClickListener {
             case R.id.txtProfile:
                 startActivity(new Intent(getActivity(), profilenew.class));
                 break;
+            case R.id.txtReport:
+                Intent intent = new Intent(getActivity(), ReportActivity.class);
+                startActivity(intent);
+
 
         }
     }

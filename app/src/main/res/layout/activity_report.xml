@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="TỔNG HỢP TÌNH HÌNH THU CHI"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:background="#CCCCCC">
+            <TextView
+                android:text="STT"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="Nội dung thu chi"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="Trong ngày"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="Tỷ lệ/tổng"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="A - Phần thu"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:layout_span="4"/>
+        </TableRow>
+
+        <TableRow android:id="@+id/layoutThu">
+        </TableRow>
+
+        <TableRow android:id="@+id/layoutTongThu">
+            <TextView
+                android:text="Tổng:"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/txtTongThu"
+                android:padding="8dp"
+                android:layout_span="3"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="B - Phần chi"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:layout_span="4"/>
+        </TableRow>
+
+        <TableRow android:id="@+id/layoutChi">
+        </TableRow>
+
+        <TableRow android:id="@+id/layoutTongChi">
+            <TextView
+                android:text="Tổng:"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/txtTongChi"
+                android:padding="8dp"
+                android:layout_span="3"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="C - Quỹ tiền hiện có:"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/txtQuyTien"
+                android:padding="8dp"
+                android:layout_span="3"/>
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnExportPDF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xuất báo cáo PDF"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

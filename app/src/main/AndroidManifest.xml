@@ -27,6 +27,7 @@
         <activity
             android:name=".activity.ContainerActivity"
             android:exported="false" />
+
         <activity android:name=".activity.ThemChiTieuActivity" />
         <activity android:name=".activity.ViTienActivity" />
         <activity android:name=".activity.DanhMucActivity" />
@@ -37,6 +38,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+        <activity android:name=".activity.ReportActivity" />
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+    </application>
 </manifest>

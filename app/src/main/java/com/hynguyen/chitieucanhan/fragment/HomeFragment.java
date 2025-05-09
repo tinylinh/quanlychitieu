@@ -57,6 +57,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
     private View view;
@@ -87,6 +89,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     //Thu Chi
     private RecyclerView rvCacChiTieu;
     private ChiTieuAdapter chiTieuAdapter;
+    private ImageButton btnSort;
+    private boolean isAscending = true;
 
     @Nullable
     @org.jetbrains.annotations.Nullable
@@ -128,7 +132,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onChanged(List<ChiTieu> chiTieuList) {
                 chiTieuAdapter.submitList(chiTieuList);
-                listChiTieu = chiTieuList;
+                listChiTieu = new ArrayList<>(chiTieuList); // Tạo bản sao
                 lineChart();
             }
         });
@@ -162,11 +166,21 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             }
         });
 
-        //Chi Tiêu
+        // Chi Tiêu
         rvCacChiTieu = view.findViewById(R.id.rvCacChiTieu);
         rvCacChiTieu.setLayoutManager(new LinearLayoutManager(getContext()));
         chiTieuAdapter = new ChiTieuAdapter(getContext());
         rvCacChiTieu.setAdapter(chiTieuAdapter);
+
+        // Khởi tạo nút Sort
+        btnSort = view.findViewById(R.id.btnSort);
+        btnSort.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sortTransactions();
+            }
+        });
+
     }
 
     @SuppressLint("SetTextI18n")
@@ -399,6 +413,34 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 }
             }
         });
+    }
+    private void sortTransactions() {
+        if (listChiTieu == null || listChiTieu.isEmpty()) {
+            Toast.makeText(getContext(), "Không có giao dịch để sắp xếp", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Tạo bản sao của danh sách để sắp xếp
+        List<ChiTieu> sortedList = new ArrayList<>(listChiTieu);
+
+        // Sắp xếp theo số tiền
+        Collections.sort(sortedList, new Comparator<ChiTieu>() {
+            @Override
+            public int compare(ChiTieu o1, ChiTieu o2) {
+                long amount1 = Long.parseLong(o1.getMoney());
+                long amount2 = Long.parseLong(o2.getMoney());
+                return isAscending ? Long.compare(amount1, amount2) : Long.compare(amount2, amount1);
+            }
+        });
+
+        // Cập nhật danh sách cho adapter
+        chiTieuAdapter.submitList(sortedList);
+
+        // Đổi trạng thái sắp xếp và xoay biểu tượng nút
+        isAscending = !isAscending;
+        if (btnSort != null) {
+            btnSort.setRotation(isAscending ? 0 : 180);
+        }
     }
 
     @Override

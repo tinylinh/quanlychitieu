@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Chi tiêu cá nhân</string>
+    <string name="expense_manager">Quản lý chi tiêu</string>
+    <string name="income">Thu nhập</string>
+    <string name="expense">Chi tiêu</string>
+    <string name="wallet">Ví tiền</string>
+    <string name="category">Danh mục</string>
     <string name="Open">Open</string>
     <string name="Close">Close</string>
     <string-array name="img_cat">
